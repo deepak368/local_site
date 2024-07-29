@@ -15,7 +15,7 @@ def login_user(request):
             ...
         else:
             messages.success(request,("ther was error in login"))
-            return redirect('login')
+            return redirect('home')
             
     else:
         return render(request,'authentication/login.html',{})
