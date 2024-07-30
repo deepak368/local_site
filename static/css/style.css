@@ -17,7 +17,7 @@ label.logo{
     color: black;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 70px;
     font-weight: bold;
 }
 nav ul{
@@ -93,7 +93,17 @@ a.active,a:hover{
         left: 0;
     }
 }
-
+.signbtn{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    width: 80px;
+    height: 38px;
+    border-radius: 10px;
+    margin-left: 15px;
+    font-size: 17px;
+    /* padding: 7px 13px; */
+    /* text-transform: uppercase; */
+}
 
 /* nav label{
     font-size: 40px;
