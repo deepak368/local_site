@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 def home_page(request):
-    return render(request,'home.html')
+    return render(request,'portfolio.html')
 def login_user(request):
     if request.method == "POST":
         username = request.POST["username"]
