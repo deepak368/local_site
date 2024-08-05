@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import TemplateView
+from .forms import UserRegisterForm
+from django.contrib.auth.models import User
 def home_page(request):
     return render(request,'portfolio.html')
 def login_user(request):
@@ -40,3 +43,21 @@ def logout_user(request):
     logout(request)
     messages.success(request,("you just logedout"))
     return redirect('home')
+
+
+class UserRegisterView(TemplateView):
+    form_class=UserRegisterForm
+    model=User
+    template_name ="registration.html"
+    def get(self, request, *args, **kwargs):
+        form=self.form_class()
+        context={}
+        context["form"]=form
+        return render(request,self.template_name,context)
+    def post(self,request, *args, **kwargs):
+        form=self.form_class(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("login")
+        else:
+            return redirect("error")

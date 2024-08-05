@@ -16,12 +16,14 @@ Including another URLconf
 """
 from django.urls import path,include
 from . import views
+from .views import UserRegisterView
 
 urlpatterns = [
     path('', views.home_page, name = 'home'),
     path('login_user', views.login_user, name = 'login'),
     path('logout', views.logout_user, name = 'logout'),
     path('register_user', views.user_register, name = 'user_register'),
+    path("register",UserRegisterView.as_view(),name="register"),
 
    
 ]
