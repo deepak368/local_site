@@ -10,10 +10,10 @@
     font-family: "Poppins", sans-serif;
 }
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #0ef;
+    --bg-color: #c0c0c0;
+    --second-bg-color: #F5EDED;
+    --text-color: black;
+    --main-color: #f0331b;
   }
 html{
     font-size: 62.5%;
@@ -247,10 +247,12 @@ span{
 }
 .portfolio-layer h4{
     font-size: 3rem;
+    color: white;
 }
 .portfolio-layer p{
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
+    color: #ffffff;
 }
 .portfolio-layer a{
     display: inline-flex;
